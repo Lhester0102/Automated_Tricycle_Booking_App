@@ -1,0 +1,147 @@
+{
+  "project_info": {
+    "project_number": "573186245678",
+    "firebase_url": "https://trikila-laoag.firebaseio.com",
+    "project_id": "trikila-laoag",
+    "storage_bucket": "trikila-laoag.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573186245678:android:75a9fbc4269489a695cbbf",
+        "android_client_info": {
+          "package_name": "com.lhester.polendey.drivers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573186245678-h73siq8de2gtv87aqfd2ig45mrfn3kjh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lhester.polendey.drivers",
+            "certificate_hash": "66b56ae09edabb2083c621bae79f52cb5f039966"
+          }
+        },
+        {
+          "client_id": "573186245678-iistshg4dulqbqtpju34pq3244b3chqq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lhester.polendey.drivers",
+            "certificate_hash": "11d41c7ed46790f118927a3b3831884d02cbfa3e"
+          }
+        },
+        {
+          "client_id": "573186245678-bpu9pfdgejdqc5kfaig5je9gp09nmsp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt8y803KFpzDNlofF95kNw-5VZfx64eP0"
+        },
+        {
+          "current_key": "AIzaSyAnjkAK9JVvEaYeSw_y1t8Q0lcz9EYCxV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573186245678-bpu9pfdgejdqc5kfaig5je9gp09nmsp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573186245678:android:b29235e24d52458595cbbf",
+        "android_client_info": {
+          "package_name": "com.lhester.polendey.operators"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573186245678-7mejbeltdcmegknohu262snsn0cll7u8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lhester.polendey.operators",
+            "certificate_hash": "11d41c7ed46790f118927a3b3831884d02cbfa3e"
+          }
+        },
+        {
+          "client_id": "573186245678-bpu9pfdgejdqc5kfaig5je9gp09nmsp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt8y803KFpzDNlofF95kNw-5VZfx64eP0"
+        },
+        {
+          "current_key": "AIzaSyAnjkAK9JVvEaYeSw_y1t8Q0lcz9EYCxV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573186245678-bpu9pfdgejdqc5kfaig5je9gp09nmsp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573186245678:android:45056d9f1518f35595cbbf",
+        "android_client_info": {
+          "package_name": "com.lhester.polendey.trikila"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573186245678-3g5cmoks9mul9shba25j8nd4rdtka6tc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lhester.polendey.trikila",
+            "certificate_hash": "11d41c7ed46790f118927a3b3831884d02cbfa3e"
+          }
+        },
+        {
+          "client_id": "573186245678-tgljmfu2ib349aola369dld7vjtusk02.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lhester.polendey.trikila",
+            "certificate_hash": "2550d7434f346b043e91a761f9aa62f36548c605"
+          }
+        },
+        {
+          "client_id": "573186245678-bpu9pfdgejdqc5kfaig5je9gp09nmsp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt8y803KFpzDNlofF95kNw-5VZfx64eP0"
+        },
+        {
+          "current_key": "AIzaSyAnjkAK9JVvEaYeSw_y1t8Q0lcz9EYCxV0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573186245678-bpu9pfdgejdqc5kfaig5je9gp09nmsp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

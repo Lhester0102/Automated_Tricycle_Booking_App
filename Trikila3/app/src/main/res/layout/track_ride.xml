@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/inRides"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/content_bd"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="REQUEST DRIVER"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/content_bd"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/passenger" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/forward_arrow" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/driver_icon" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/content_bd"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/passenger" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/driver_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/third"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/content_bd"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            app:srcCompat="@drawable/driver_icon" />
+
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/forward_arrow" />
+
+        <ImageView
+            android:id="@+id/image6"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/pin_geen" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btncancelRide"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_btn_red"
+        android:text="Cancel"
+        android:textSize="16sp" />
+</LinearLayout>

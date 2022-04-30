@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relmap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent">
+
+        <com.mapbox.mapboxsdk.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            mapbox:mapbox_cameraTargetLat="38.9098"
+            mapbox:mapbox_cameraTargetLng="-77.0295"
+            mapbox:mapbox_cameraZoom="15" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/pin_blue"
+        mapbox:layout_constraintBottom_toBottomOf="parent"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bottom_sheet_bg"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_destination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_toRightOf="@+id/imgSearch"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/pin_blue"
+                android:ems="10"
+                android:hint="Search Destination"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnSetDes"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/custom_button"
+        android:text="SET Destination"
+        android:textSize="17dp"
+        mapbox:layout_constraintBottom_toBottomOf="@+id/relmap"
+        mapbox:layout_constraintEnd_toEndOf="parent"
+        mapbox:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="vertical"
+        mapbox:layout_constraintBottom_toTopOf="@+id/btnSetDes"
+        mapbox:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/normal" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/sat" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

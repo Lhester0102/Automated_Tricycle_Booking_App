@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">TriKila</string>
+    <string name="reg"><u>Sign Up New Account?</u></string>
+    <string name="title_activity_customer_map">TriKila</string>
+    <string name="title_activity_places__s">Map</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="gen">Choose Gender</string>
+    <string-array name="municipality">
+        <item>Bacarra</item>
+        <item>Badoc</item>
+        <item>Bangui</item>
+        <item>Banna</item>
+        <item>Batac City</item>
+        <item>Burgos</item>
+        <item>Carasi</item>
+        <item>Curimao</item>
+        <item>Dingras</item>
+        <item>Laoag City</item>
+        <item>Marcos</item>
+        <item>Nueva Era</item>
+        <item>Pagudpud</item>
+        <item>Paoay</item>
+        <item>Pasuquin</item>
+        <item>Piddig</item>
+        <item>Pinili</item>
+        <item>San Nicolas</item>
+        <item>Sarrat</item>
+        <item>Solsona</item>
+        <item>Vintar</item>
+
+    </string-array>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <style name="myToolbarTheme">
+        <item name="colorControlNormal">#FFFFFF</item>
+    </style>
+
+    <string name="access_token">pk.eyJ1IjoibGhlc3RlcjA4IiwiYSI6ImNrbmd2MjNqMTAwb24yc3QxOGVxNjJiMDAifQ.lEm25NigjnVbNSO8kUQuiQ</string>
+    <string name="user_location_permission_explanation">This app needs location permissions to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
+    <string name="btnclose">CLOSE</string>
+    <string name="announcement">Announcement</string>
+</resources>

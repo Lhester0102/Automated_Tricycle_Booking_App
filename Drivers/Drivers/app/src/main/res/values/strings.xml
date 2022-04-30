@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Drivers</string>
+    <string name="reg"><u>Sign Up New Account?</u></string>
+    <string name="title_activity_driver_map">Map</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="access_token">pk.eyJ1IjoibGhlc3RlcjA4IiwiYSI6ImNrbmd2MjNqMTAwb24yc3QxOGVxNjJiMDAifQ.lEm25NigjnVbNSO8kUQuiQ</string>
+    <string name="user_location_permission_explanation">This app needs location permissions to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
+    <string name="sign_in">Sign IN</string>
+    <string name="btn_close">Close</string>
+    <string name="trikila_drivers">TRIKILA DRIVERS</string>
+    <string name="announcement">Announcement</string>
+</resources>

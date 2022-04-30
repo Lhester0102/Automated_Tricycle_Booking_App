@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8695E8"
+    tools:context=".settings2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/close_button"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Close This"
+                    android:src="@drawable/back"
+                    app:tint="@color/colorWhite" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/save_button"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Save This"
+                    android:src="@drawable/ok"
+                    app:tint="@color/colorWhite" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/content_bd"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="1dp"
+                    app:civ_border_width="2dp"
+                    android:src="@drawable/ic_person_black_24dp" />
+                <TextView
+                    android:id="@+id/change_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Change Email"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/change_picture_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="Change Password"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:isIndicator="true"
+                    android:clickable="false"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:numStars="5"
+                    android:rating="5"
+                    android:stepSize="0.5" />
+
+                <EditText
+                    android:id="@+id/uid"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_border"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawableTint="@color/colorBlack"
+                    android:enabled="false"
+                    android:hint="User ID"
+                    android:visibility="gone"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_border"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawableTint="@color/colorBlack"
+                    android:hint="Last Name"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_border"
+                    android:drawableStart="@drawable/ic_person"
+                    android:drawableTint="@color/colorBlack"
+                    android:hint="First Name"
+                    android:padding="10dp" />
+
+                <EditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_border"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawableTint="@color/colorBlack"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:padding="10dp"
+                    android:paddingStart="15dp" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_border"
+                    android:drawableStart="@drawable/ic_address"
+                    android:drawableTint="@color/colorBlack"
+                    android:hint="Address"
+                    android:inputType="textMultiLine"
+                    android:padding="10dp" />
+
+                <Spinner
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/edittext_border"
+                    android:entries="@array/gender"
+                    android:prompt="@string/gen" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

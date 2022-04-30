@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#65E1E2E3"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/rel2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/edittext_border"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Schedule Arkila Request"
+                android:textColor="@color/colorBlack"
+                android:textAlignment="center"
+                android:textSize="21sp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/sprofile_image_customer"
+                android:layout_width="120dp"
+                android:layout_height="110dp"
+                android:layout_gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_person_black_24dp"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:id="@+id/scustomer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/sprofile_image_customer"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableTint="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:text="Customer Name"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/scustomer_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scustomer_name"
+
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/sprofile_image_customer"
+                android:drawableStart="@drawable/ic_call_black_24dp"
+                android:drawableTint="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:text="Customer  Number"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/spickup_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/scustomer_phone"
+
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/sprofile_image_customer"
+                android:drawableStart="@drawable/ic_pin_green"
+                android:drawableTint="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:text="Customer Pickup Location"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/sdestination_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/sprofile_image_customer"
+                android:drawableStart="@drawable/ic_pin_green"
+                android:drawableTint="@color/colorBlack"
+                android:gravity="center_vertical"
+                android:text="Customer  Destination"
+                android:textColor="@color/colorBlack" />
+            <LinearLayout
+                android:id="@+id/l1"
+                android:layout_below="@+id/sdestination_text"
+                android:layout_toRightOf="@+id/sprofile_image_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:id="@+id/sdistance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/peso"
+                    android:layout_marginBottom="5dp"
+                    android:drawableTint="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:text="Distance"
+                    android:textColor="@color/colorBlack" />
+                <TextView
+                    android:id="@+id/sfare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+
+                    android:layout_marginBottom="5dp"
+                    android:drawableStart="@drawable/peso"
+                    android:drawableTint="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:text="0.0"
+                    android:textColor="@color/colorBlack" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/l1"
+                android:layout_toRightOf="@+id/sprofile_image_customer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <TextView
+                    android:id="@+id/sdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableTint="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textColor="@color/colorBlack" />
+                <TextView
+                    android:id="@+id/stime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawableTint="@color/colorBlack"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:text="Time"
+                    android:textColor="@color/colorBlack" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/check_later"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/custom_btn_red"
+                android:text="Check Later" />
+            <Button
+                android:id="@+id/view_request"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/custom_button"
+                android:text="View Request" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

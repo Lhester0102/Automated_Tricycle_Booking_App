@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lhester.polendey.trikila">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/passenger"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/passenger"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Schedules.Msg2"></activity>
+        <activity android:name=".Schedules.SubmitRating2" />
+        <activity android:name=".Schedules.ViewSched" />
+        <activity android:name=".TrackRide" />
+        <activity android:name=".RateDriver" />
+        <activity android:name=".Schedules.MySchedules" />
+        <activity android:name=".NewRide" />
+        <activity android:name=".OnlineDrivers" />
+
+        <service
+            android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"
+            android:stopWithTask="false" />
+
+        <activity android:name=".DriverFound" />
+        <activity android:name=".Announcement" />
+        <activity android:name=".Msgs" />
+        <activity android:name=".TryPhone" />
+        <activity android:name=".View_History" />
+        <activity android:name=".Place_Pickup" />
+        <activity android:name=".Activity_Histories" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.mapbox.EnableEvents"
+            android:value="false" />
+
+        <activity android:name=".settings2" />
+        <activity android:name=".Submit_Ratings" />
+        <activity
+            android:name=".ActivityPlaces_S"
+            android:label="@string/title_activity_places__s" />
+        <activity android:name=".SplashScreen" />
+        <activity android:name=".logincustomer">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".register_customer" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".CustomerMapActivity"
+            android:label="@string/title_activity_customer_map" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+
+</manifest>

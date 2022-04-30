@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="My Arkila"
+            android:icon="@drawable/driver_icon"
+            android:id="@+id/sched"
+            />
+        <item
+            android:title="Profile"
+            android:icon="@drawable/ic_person"
+            android:id="@+id/profile"
+            />
+        <item
+            android:title="Histories"
+            android:icon="@drawable/ic_history"
+            android:id="@+id/histories"
+            />
+        <item
+            android:title="@string/announcement"
+            android:icon="@drawable/ic_sms"
+            android:id="@+id/announcement"
+            />
+    </group>
+    <item
+        android:title="Log out"
+        android:icon="@drawable/ic_exit"
+        android:id="@+id/logout"
+        />
+</menu>

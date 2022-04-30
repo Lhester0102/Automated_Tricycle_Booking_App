@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8695E8"
+    tools:context=".register_customer">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/content_bd"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Passenger Registration"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtemail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableTint="@color/colorBlack"
+                android:ems="10"
+                android:hint="Email Address"
+                android:inputType="textEmailAddress"
+                android:paddingStart="5dp" />
+
+            <EditText
+                android:id="@+id/txtpassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableTint="@color/colorBlack"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="5dp" />
+
+            <EditText
+                android:id="@+id/txtpassword2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableTint="@color/colorBlack"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:paddingStart="5dp" />
+
+            <EditText
+                android:id="@+id/lname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableTint="@color/colorBlack"
+                android:ems="10"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:paddingStart="5dp" />
+
+            <EditText
+                android:id="@+id/fname"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableTint="@color/colorBlack"
+                android:ems="10"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:paddingStart="5dp" />
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_border"
+                android:entries="@array/gender"
+                android:prompt="@string/gen" />
+
+            <EditText
+                android:id="@+id/contact"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawableTint="@color/colorBlack"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="Contact Number"
+                android:inputType="text"
+                android:paddingStart="5dp"
+                android:textColor="@color/colorBlack"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_border"
+                android:drawableStart="@drawable/ic_address"
+                android:drawableTint="@color/colorBlack"
+                android:ems="10"
+                android:hint="Barangay"
+                android:inputType="textPostalAddress"
+                android:paddingStart="5dp" />
+
+
+            <Spinner
+                android:id="@+id/municipality"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edittext_border"
+                android:entries="@array/municipality"
+                android:prompt="@array/municipality" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:id="@+id/terms"
+                    android:layout_marginTop="5dp"
+                    android:text="Agree to the"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="Register_Customer"
+                    android:text=" Terms and Condition"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnregister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/custom_button"
+                android:text="Register" />
+
+            <Button
+                android:id="@+id/btncancel"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_btn_red"
+                android:text="@android:string/cancel" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

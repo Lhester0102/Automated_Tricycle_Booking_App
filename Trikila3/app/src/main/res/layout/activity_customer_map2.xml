@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/app_bar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.mapbox.mapboxsdk.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                mapbox:mapbox_cameraTargetLat="38.9098"
+                mapbox:mapbox_cameraTargetLng="-77.0295"
+                mapbox:mapbox_cameraZoom="15" />
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:itemHorizontalPadding="10dp"
+            app:itemIconTint="@color/colorBlack"
+            app:menu="@menu/menu_nav"
+            app:theme="@style/NavigationDrawerStyle" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/bottomsheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bottom_sheet_bg"
+            android:orientation="vertical"
+            mapbox:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+            mapbox:layout_constraintBottom_toBottomOf="parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/pickuptext"
+                                android:visibility="gone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/img_pickup"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border"
+                                android:drawableStart="@drawable/pin_blue"
+                                android:ems="10"
+                                android:hint="Pickup Location"
+                                android:inputType="textMultiLine"
+                                android:padding="10dp"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/btn_loc"
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/ic_location"
+                                mapbox:tint="@drawable/custom_btn_other" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/txt_destination"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_toRightOf="@+id/imgSearch"
+                                android:layout_weight="1"
+                                android:background="@drawable/edittext_border"
+                                android:drawableStart="@drawable/pin_geen"
+                                android:ems="10"
+                                android:hint="Destination"
+                                android:inputType="textMultiLine"
+                                android:padding="10dp"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:id="@+id/btnrefresh"
+                                android:layout_width="40dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="8dp"
+                                android:src="@drawable/ic_refresh"
+                                mapbox:tint="@drawable/custom_btn_other" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/edittext_border"
+                        android:visibility="gone"
+                        mapbox:layout_constraintEnd_toEndOf="parent"
+                        mapbox:layout_constraintHorizontal_bias="1.0"
+                        mapbox:layout_constraintStart_toStartOf="parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_image_driver"
+                            android:layout_width="150dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="3dp"
+                            android:src="@drawable/ic_person_black_24dp"
+                            mapbox:civ_border_color="@color/colorPrimaryDark"
+                            mapbox:civ_border_width="2dp" />
+                        <ImageView
+                            android:id="@+id/ms"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/profile_image_driver"
+                            android:layout_toLeftOf="@+id/fare"
+                            android:layout_alignParentStart="true"
+
+
+                            android:src="@drawable/ic_email"
+                            app:tint="@color/colorBlack" />
+                        <TextView
+                            android:id="@+id/msgcount"
+                            android:layout_below="@+id/profile_image_driver"
+                            android:background="@drawable/bgnotif"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="82dp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="5dp"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:text="0"
+                            android:visibility="gone"
+                            />
+                        <ImageView
+                            android:id="@+id/cl"
+                            android:layout_width="60dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/profile_image_driver"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toLeftOf="@+id/fare"
+                            android:src="@drawable/ic_phone"
+                            android:visibility="gone"
+                            app:tint="@color/colorBlack"
+                            />
+
+                        <TextView
+                            android:id="@+id/driver_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/driver_name"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:drawableTint="@color/colorBlack"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:layout_toRightOf="@+id/profile_image_driver"
+                            android:gravity="center_vertical"
+                            android:text=" Driver Phone Number"
+
+                            android:textColor="@color/colorBlack"
+                            />
+
+                        <TextView
+                            android:drawableTint="@color/colorBlack"
+                            android:gravity="center_vertical"
+                            android:drawableStart="@drawable/ic_plate"
+                            android:id="@+id/driver_plate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/driver_phone"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="5dp"
+                            android:paddingStart="3dp"
+                            android:layout_toRightOf="@+id/profile_image_driver"
+                            android:text="SNUMBER"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorBlack"
+                            />
+
+                        <TextView
+                            android:drawableTint="@color/colorBlack"
+                            android:drawableStart="@drawable/ic_person"
+                            android:gravity="center_vertical"
+                            android:id="@+id/driver_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_toRightOf="@+id/profile_image_driver"
+                            android:text="Driver Name"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:drawableTint="@color/colorBlack"
+
+                            android:drawableStart="@drawable/peso"
+                            android:id="@+id/fare"
+                            android:gravity="center_vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/driver_plate"
+                            android:layout_marginStart="0dp"
+                            android:paddingStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_toRightOf="@+id/profile_image_driver"
+                            android:text="Fare:0.00"
+                            android:textColor="@color/colorBlack"
+                             />
+
+
+                    <!--    <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_below="@+id/fare"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/custom_button"
+                            android:src="@drawable/ic_email"
+                            app:tint="@color/colorWhite" /> -->
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/btncall"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/custom_button"
+                        android:text="FIND TRICYCLE"
+                        android:textSize="17dp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
